@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a homepage for WDD231 works">
+    <meta name="author" content="Claudia Madrid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage for WDD231</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:wght@500&display=swap" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/hamburguer-menu.js"></script>
+    <script defer src="scripts/courses-display.js"></script>
+   
+<body>
+    <header>
+        <div class="container-header">
+            <div><img class="photo" src="images/claudia-madrid.jpg" alt="My photo Claudia Madrid"></div>
+            <h1>Claudia Oralia Madrid Ontiveros</h1>
+        </div>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="activePage">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="https://github.com/Blueclaus13">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/ing-claudia-madrid/">Linkedin</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <main>
+        <section id="course-work">
+            <h2 class="title">Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section id="root">
+            <h2 class="title">Chihuahua, Mexico</h2>
+            <div class="container-section">
+                <div><img class="photo" src="images/chihuahua-majalca.jpg" alt="Majalca Stone in Chihuahua"></div>
+                <p><strong>Chihuahua </strong> is the bigest state in Mexico. 
+                    We're on the border with New Mexico and Texas. </p>
+            </div>
+        </section>
+        <section  id="course-list">
+            <h2 class="title">Web and Computer Programming Certificate</h2>
+            <div class="container-buttons">
+                <button id="all">ALL</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <p>Credits <strong>Required</strong>: <span id="creditsRequired"></span></p>
+            <div class="container-section" id="courses">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> Claudia Madrid - Chihuahua, Chihuahua, Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
