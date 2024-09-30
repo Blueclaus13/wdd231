@@ -23,6 +23,11 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+  nav{
+    background-color: var(--primary-color);
+    height:50px;
+    grid-template-rows: 1fr;
+  }
 header {
     color: var(--light-text);
     background-color: var(--primary-color);
@@ -33,23 +38,31 @@ header {
 }
 #menu{
     display: none;
+    border-radius: 30px;
 }
 #menu:hover{
     background-color: var(--secondary-color);
 }
 #menu.show::before{
     content: "x";
+   
 }
 #menu::before{
-    content: "≡";
+    content: "☰";
+    justify-self: center;
 }
 .navigation{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 .navigation li{
     list-style: none;
     margin: 0 auto;
-    max-width: 760px;
+    flex-grow: 1;
+    flex-basis:0;
 }
 .navigation a{
     display: block;
@@ -68,6 +81,13 @@ a{
     font-size:clamp(2rem, 2vmin, 1.5rem);
 }
 .container-header{
+    display: grid;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+.container-student{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,9 +111,7 @@ a{
     height: 10rem;
     margin: 1em;
   }
-img{
-    width: 100%;
-}
+
 section{
     background-color: var(--light-color);
     padding-top: 1.5rem;
@@ -157,8 +175,8 @@ main{
     gap: 1%;
 }
 .active, .activePage{
-    color: var(--primary-color);
-    background-color: var(--light-text);
+    color: var(--light-text);
+    background-color: var(--secondary-color);
 }
 button{
     padding: 0.5rem 1rem;
@@ -185,32 +203,36 @@ button{
         display: block;
         flex: 1 1 100%;
     }
-    .navigation li{
-        display: none;
+    nav{
+        height:auto;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+      }
+    nav ul {
+        overflow: hidden;
+    }
+    nav.show{
+        grid-template-rows: 1fr;
     }
     .navigation a {
         text-align: left;
     }
     #menu{
         display: block;
-        position: absolute;
-        top: 0.5rem;
-        right: 1rem;
-        margin-top: 0.25%;
         font-size: 2rem;
         font-weight: 700;
         text-decoration: none;
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
+        background: none;
+        color: var(--light-text);
+        cursor: pointer;
+        padding: 0.25rem 2vw;
     }
-    .show li{
-        display: block;
-    }
-    .container-header{
+    .container-student{
         flex-direction: column;
         justify-content: space-around;
     }
-    .container-header h1{
+    .container-student h1{
         text-align: center;
     }
     .container-section{

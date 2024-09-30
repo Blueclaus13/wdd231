@@ -1,0 +1,43 @@
+@media screen and (max-width: 900px){
+    .navigation{
+        display: block;
+        flex: 1 1 100%;
+    }
+    nav{
+        height:auto;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+      }
+    nav ul {
+        overflow: hidden;
+    }
+    nav.show{
+        grid-template-rows: 1fr;
+    }
+    .navigation a {
+        text-align: left;
+    }
+    #menu{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        background: none;
+        color: var(--light-text);
+        cursor: pointer;
+        padding: 0.25rem 2vw;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 25% 100px auto; */
+        gap: 5px;
+        max-width: 100%;
+    } 
+    #companies.list section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
