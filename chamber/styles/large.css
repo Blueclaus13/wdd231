@@ -84,7 +84,8 @@ header {
 .container-header{
     display: grid;
     grid-template-columns: 44px auto 44px;
-    align-items: end;
+    align-items: center;
+    align-content:  end;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
 }
