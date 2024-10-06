@@ -75,7 +75,7 @@ async function getCompaniesData(url) {
         let response = await fetch(url);
         if (!response.ok) throw new Error('Failed to fetch companies');
         let data = await response.json();
-        console.table(data);
+        //console.table(data);
         displayCompanies(data);
         
     } catch (error) {

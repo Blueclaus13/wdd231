@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a homepage for works in class WDD231. 
+    This page gives an e-commerse directory of several business in Chihuahua">
+    <meta name="author" content="Claudia Madrid Ontiveros">
+    <meta property="og:title" content="This is a business project for studying purposes." />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blueclaus13.github.io/wdd231/chamber/" />
+    <meta property="og:image" content="https://blueclaus13.github.io/wdd231/chamber/images/free_icon_-reda.svg" />
+    <script src="scripts/home.js" type="module"></script>
+    <title>The Raramuri Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container-header">
+        <img src="images/free_icon_-reda.svg" alt="https://www.flaticon.com/free-icons/study Study icons created by Reda - Flaticon" width="34" height="40">
+        <h1>The Raramuri Chamber of Commerce</h1>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav id="animateme">
+        <ul class="navigation">
+            <li class="activePage"><a href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>
+        </ul> 
+    </nav>
+    <section>
+        <picture id="hero">
+            <img src="images/hero-photo.webp" alt="Woman and child Raramuri in Sierra Madre Chihuahua. Made by Octavio Romero" loading="lazy">
+        </picture>
+    </section>
+    <main>
+        <section id="join">
+            <h2>Join The Chamber</h2>
+            <p>Give us your email to send you more information</p>
+            <form>
+                <label for="femail">Email:</label>
+                <input type="email" id="email" name="femail" placeholder="yourEmail@gmail.com">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3>Business Convention</h3>
+                <p>Nov 13th Palomar</p>
+            </div>
+            <div class="event">
+                <h3>Tourism Networking</h3>
+                <p>Oct 25th Teatro Niños Heroes</p>
+            </div>
+            <div class="event">
+                <h3>Posada</h3>
+                <p>Dic 15th Convention center</p>
+            </div>
+        </section>
+        <section id="weather">
+            <h2>Weather</h2>
+            <p>The current temperature in Chihuahua, Mexico is <span id="current-temp"></span></p>
+            <figure>
+              <img id="weather-icon" src="" alt="">
+              <figcaption></figcaption>
+            </figure>
+        </section>
+        <section id="members">
+            <h2>Business Spotlight</h2>
+            <div id="spotlights"></div>
+        </section>
+    </main>
+  
+    <footer>
+        <p>© <span id="currentYear"></span> Claudia Madrid - Chihuahua, Chihuahua, Mexico</p>
+        <p id="lastModified"></p>
+    </footer> 
+</body>
+</html>

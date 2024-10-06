@@ -40,4 +40,17 @@
         justify-content: center;
         align-items: center;
     }
+    #join{
+        position: static;
+        background: var(--secondary-color);
+        color: var(--light-text);
+        text-align: center;
+        font-family: var(--font-header);
+        margin: 0 auto;
+        width: 50%;
+    }
+    #join p, #join form{
+        font-family: var(--font-body);
+        text-align: left;
+    }
 }
