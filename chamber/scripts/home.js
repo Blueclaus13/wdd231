@@ -21,7 +21,6 @@ const currentWeather = `https://api.openweathermap.org/data/2.5/weather?q=Chihua
 const forecastWeather = `https://api.openweathermap.org/data/2.5/forecast?q=Chihuahua&units=metric&appid=529456b2861e433f067927496ec57b2f`;
 
 const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 const forecastContainer = document.getElementById('forecast');
 
@@ -34,9 +33,9 @@ const weatherData = async () => {
     captionDesc.innerHTML = `Description: ${dataCurrent.weather[0].description}`;
     
     const iconsrc = `https://openweathermap.org/img/w/${dataCurrent.weather[0].icon}.png`;
-    let desc = dataCurrent.weather[0].description;
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
+    const weatherIcon = document.querySelector('#weather-icon');
+    weatherIcon.src = iconsrc;
+    weatherIcon.alt = dataCurrent.weather[0].description; 
 
     // Weather forecast
     const responseForecast = await fetch(forecastWeather);
