@@ -90,9 +90,18 @@ const renderCompanies = (companies) => {
         let phone = document.createElement("p");
         let info = document.createElement("p");
         let url = document.createElement("a");
+        let membership = document.createElement("p");
 
         
         name.innerHTML = `${company.name}`;
+
+        if(company.membership_level === 1){
+            membership.innerHTML = `Gold Membership`;
+        }else if(company.membership_level === 2){
+            membership.innerHTML = `Silver Membership`;
+        }else{
+            membership.innerHTML = `Bronce Membership`;
+        }
 
         address.innerHTML = `${company.address}`;
         phone.innerHTML = `${company.phone}`;
@@ -110,6 +119,7 @@ const renderCompanies = (companies) => {
 
         card.appendChild(logo);
         card.appendChild(name);
+        card.appendChild(membership);
         card.appendChild(address);
         card.appendChild(phone);
         card.appendChild(url);

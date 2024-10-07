@@ -40,41 +40,48 @@
             <img src="images/hero-photo.webp" alt="Woman and child Raramuri in Sierra Madre Chihuahua. Made by Octavio Romero" loading="lazy">
         </picture>
     </section>
+    <section id="join">
+        <h3>Join The Chamber</h3>
+        <p>Give us your email to send you more information</p>
+        <form>
+            <label for="femail">Email:</label>
+            <input type="email" id="email" name="femail" placeholder="yourEmail@gmail.com">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
     <main>
-        <section id="join">
-            <h2>Join The Chamber</h2>
-            <p>Give us your email to send you more information</p>
-            <form>
-                <label for="femail">Email:</label>
-                <input type="email" id="email" name="femail" placeholder="yourEmail@gmail.com">
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+        <!-- <h2>HOME</h2> -->
         <section id="events">
-            <h2>Upcoming Events</h2>
+            <h3>Upcoming Events</h3>
             <div class="event">
-                <h3>Business Convention</h3>
+                <h4>Business Convention</h4>
                 <p>Nov 13th Palomar</p>
             </div>
             <div class="event">
-                <h3>Tourism Networking</h3>
+                <h4>Tourism Networking</h4>
                 <p>Oct 25th Teatro Niños Heroes</p>
             </div>
             <div class="event">
-                <h3>Posada</h3>
+                <h4>Posada</h4>
                 <p>Dic 15th Convention center</p>
             </div>
         </section>
         <section id="weather">
-            <h2>Weather</h2>
-            <p>The current temperature in Chihuahua, Mexico is <span id="current-temp"></span></p>
-            <figure>
-              <img id="weather-icon" src="" alt="">
-              <figcaption></figcaption>
-            </figure>
+            <section>
+                <h3>Current Weather</h3>
+                <p>The current temperature in Chihuahua, Mexico is <span id="current-temp"></span></p>
+                <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>Weather Forecast</h3>
+                <div id="forecast"></div>
+            </section>
         </section>
         <section id="members">
-            <h2>Business Spotlight</h2>
+            <h3>Business Spotlight</h3>
             <div id="spotlights"></div>
         </section>
     </main>
