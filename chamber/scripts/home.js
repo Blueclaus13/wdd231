@@ -22,6 +22,7 @@ const forecastWeather = `https://api.openweathermap.org/data/2.5/forecast?q=Chih
 
 const currentTemp = document.querySelector('#current-temp');
 const captionDesc = document.querySelector('figcaption');
+const figure = document.querySelector('figure');
 const forecastContainer = document.getElementById('forecast');
 
 const weatherData = async () => {
@@ -33,9 +34,11 @@ const weatherData = async () => {
     captionDesc.innerHTML = `Description: ${dataCurrent.weather[0].description}`;
     
     const iconsrc = `https://openweathermap.org/img/w/${dataCurrent.weather[0].icon}.png`;
-    const weatherIcon = document.querySelector('#weather-icon');
+    let weatherIcon = document.createElement("img");
+    weatherIcon.setAttribute("id", "#weather-icon");
     weatherIcon.src = iconsrc;
     weatherIcon.alt = dataCurrent.weather[0].description; 
+    figure.appendChild(weatherIcon);
 
     // Weather forecast
     const responseForecast = await fetch(forecastWeather);
