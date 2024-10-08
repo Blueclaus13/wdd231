@@ -135,8 +135,8 @@ main{
 #course-list{
     grid-column: 1/-1;  
 }
-#course-list p{
-    text-align: center;
+#course-list p:first-of-type{
+    padding: 5px;
 }
 .title{
     background-color: var(--primary-color);
@@ -162,7 +162,11 @@ main{
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    cursor: pointer;
 }
+.course:hover {
+    filter: brightness(0.8);
+  }
 .incomplete{
     background-color: var(--neutral-color);
     color: var(--dark-text);
@@ -186,6 +190,7 @@ button{
     font-family: var(--font-header);
     font-weight: 900;
     border-radius: 15%;
+    cursor: pointer;
 }
 .container-buttons{
     display: flex;
@@ -193,6 +198,43 @@ button{
     justify-content: center;
     align-items: center;
 }
+#course-details{
+    margin: 10% auto;
+    width: 80%;
+    max-width: 350px;
+    background-color: var(--light-color);
+    padding: 30px;
+    border: 0;
+    border-radius: 5px;
+    text-align: justify;
+}
+#course-details h3{
+    background-color: var(--secondary-color);
+    padding: 5px;
+    font-family: var(--font-header);
+}
+dialog > button {
+    margin: 20px auto;
+  }
+  dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+ #closeModal {
+    display: block;
+    margin: 40px auto;
+    border: 0;
+    border-radius: 8px;
+    padding: 7px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--primary-color);
+    cursor: pointer;
+    color: var(--light-text);
+    transition: all 240ms linear;
+  } 
+  #closeModal:hover{
+    filter: brightness(0.8);
+  }
 
 @media screen and (max-width: 900px){
     .content{

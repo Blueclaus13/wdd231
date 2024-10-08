@@ -79,17 +79,47 @@ const courses = [
 ];
 
 const buttons = document.querySelectorAll("button");
+const courseDetails = document.querySelector('#course-details');
+const coursesDiv = document.getElementById('courses');
 
 function renderClass(courses){
+    coursesDiv.innerHTML = "";
+    courses.forEach(course =>{
+        const courseDiv = document.createElement("div");
+        courseDiv.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
+        courseDiv.classList.add('course');
+
+        coursesDiv.appendChild(courseDiv);
+        if(!course.completed){
+            courseDiv.classList.add('incomplete');}
+        courseDiv.addEventListener("click", ()=>{
+            displayCourseDetails(course);
+        });
+    });
+
     const creditsRequired = courses.reduce((total, currentValue)=> total + currentValue.credits, 0);
-    const classTemplate = courses.map((course)=>{
-        if(course.completed){
-            return `<div class="course"> ${course.subject} ${course.number}</div>`;
-        }else{
-            return `<div class="course incomplete"> ${course.subject} ${course.number}</div>`;
-        }});
-    document.querySelector('#courses').innerHTML = classTemplate.join('');
     document.querySelector('#creditsRequired').innerHTML = creditsRequired;
+};
+
+function displayCourseDetails(course){
+    
+    courseDetails.innerHTML = "";
+    courseDetails.innerHTML = `
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    <button id="closeModal"> Close</button>`;
+
+    courseDetails.showModal();
+    const closeModal = document.querySelector("#closeModal");
+    closeModal.addEventListener("click", ()=>{
+        courseDetails.close();
+    });
+
+    
 
 };
 
@@ -113,3 +143,11 @@ buttons.forEach(button => {
         };
       });
 });
+let allButton = document.querySelector('#all');
+
+window.addEventListener('load', (event) => {
+    // Code to execute when the page is fully loaded
+    allButton.classList.add('active');
+    renderClass(courses);
+  });
+
