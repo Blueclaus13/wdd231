@@ -36,6 +36,7 @@ showInfor.innerHTML = `
 <p><strong>Email</strong>: ${show("email")}</p>
 <p><strong>Cell phone</strong>: ${show("phone")}</p>
 <p><strong>Organizational Title</strong>: ${show("title")}</p>
+<p><strong>Organizational Name</strong>: ${show("orgName")}</p>
 <p><strong>Description</strong>: ${show("description")}</p>
 <p><strong>Submission Date</strong>: ${show("timestamp")}</p>
 `;
