@@ -124,18 +124,13 @@ section{
 
 #typography{
   background-color: var(--tertiary-color);
+  text-align: center;
+  margin: 0 auto;
+}
+
+#typography ul{
   list-style: none;
 }
-
-#typography h2,
-#typography h3,
-#typography p {
-    text-align: center;
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 #title-fonts{
   font-family: var(--font-headline);
