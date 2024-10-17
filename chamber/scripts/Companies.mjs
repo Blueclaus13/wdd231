@@ -1,4 +1,4 @@
-import clearChildren from './utils.mjs';
+import {clearChildren} from './utils.mjs';
 const url = 'data/members.json';
 const companiesContainer = document.querySelector("#spotlights");
 const aCompanies = {
