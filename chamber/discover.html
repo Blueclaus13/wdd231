@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a homepage for works in class WDD231. 
+    This page gives an e-commerse directory of several business in Chihuahua">
+    <meta name="author" content="Claudia Madrid Ontiveros">
+    <meta property="og:title" content="This is a business project for studying purposes." />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blueclaus13.github.io/wdd231/chamber/" />
+    <meta property="og:image" content="https://blueclaus13.github.io/wdd231/chamber/images/free_icon_-reda.svg" />
+    <script defer src="scripts/getDates.js"></script>
+    <script defer src="scripts/hamburguer-menu.js"></script>
+    <script defer src="scripts/discover.js"></script>
+    <title>The Raramuri Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <img src="images/free_icon_-reda.svg" alt="https://www.flaticon.com/free-icons/study Study icons created by Reda - Flaticon" width="34" height="40">
+            <h1>The Raramuri Chamber of Commerce</h1>
+            <a id="menu" href="#"></a>
+        </div>
+    </header>
+    <nav id="animateme">
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li class="activePage"><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul> 
+    </nav>
+    <main>
+        <!-- Sidebar Section -->
+        <aside class="side" aria-labelledby="welcome">
+            <h2 id="welcome">Welcome to Our Business Community</h2>
+            <p id="message">...</p>
+            <section id="demographics" aria-labelledby="demographics">
+                <h3>Local Business Demographics</h3>
+            <ul>
+                <li><strong>Population:</strong> 925,762</li>
+                <li><strong>Median Age:</strong> 28 years</li>
+                <li><strong>Median Income:</strong> $120,000/year</li>
+                <li><strong>Elevation:</strong> 1,415 m</li>
+                <li><strong>Major:</strong>Marco Bonilla Mendoza</li>
+            </ul>
+            </section>
+
+            <section aria-labelledby="events">
+                <h3>Connect with others:</h3>
+                <div id="events">
+                    <div class="event">
+                        <h4>Business Convention</h4>
+                        <p>Nov 13th Palomar</p>
+                    </div>
+                    <div class="event">
+                        <h4>Tourism Networking</h4>
+                        <p>Oct 25th Teatro Niños Heroes</p>
+                    </div>
+                    <div class="event">
+                        <h4>Posada</h4>
+                        <p>Dic 15th Convention center</p>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="calendar">
+                <h3>Monthly Calendar</h3>
+                <div id="fullcalendar">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=a16983e07283200ce494f4d2e8de03f018cd413712b113215453fff5e8b4e72a%40group.calendar.google.com&ctz=America%2FPhoenix" style="border: 0" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </section>
+        </aside>
+        <section class="gallery">
+            <h2>Chihuahua Gallery</h2>
+                <div class="image-column">
+                    <picture class="photo-card">
+                        <img src="images/jpeg-optimizer_chihuahua-mexico-copper-canyon.webp" width="250" height="150" alt="Copper Canyon" loading="lazy">
+                    </picture>
+                    <picture class="photo-card">
+                        <img src="images/jpeg-optimizer_chihuahua-mexico-cathedral.webp"  width="250" height="150" alt="Historic Center" loading="lazy">
+                    </picture>
+                    <picture class="photo-card">
+                        <img src="images/jpeg-optimizer_Museo-Semilla-Chihuahua_8.webp"  width="250" height="150" alt="Semilla museum" loading="lazy">
+                    </picture>
+                    <picture class="photo-card">
+                        <img src="images/jpeg-optimizer_Feria-Santa-Rita.webp"  width="250" height="150" alt="Santa Rita Fair" loading="lazy">
+                    </picture>
+                    <picture class="photo-card">
+                        <img src="images/jpeg-optimizer_Grutas.webp"  width="250" height="150" alt="Grutas" loading="lazy">
+                    </picture>
+                    <picture class="photo-card">
+                        <img src="images/jpeg-optimizer_Quinta-Gameros.webp"  width="250" height="150" alt="Quinta Gameros House" loading="lazy">
+                    </picture>
+                </div>
+        </section>
+       
+
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> Claudia Madrid - Chihuahua, Chihuahua, Mexico</p>
+        <p id="lastModified"></p>
+    </footer> 
+</body>
+</html>
