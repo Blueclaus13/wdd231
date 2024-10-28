@@ -108,7 +108,7 @@ const packages = [
           description:"Great to visit with your Friends or partner",
           include: ["Flight", "Booking", "Tourist Guide", "illimit snacks", "illimit drinks", "Daily breakfast", "Transportation", "museums"],
           imageUrl:
-          "./images/Mexico City offer.webp"
+          "./images/Mexico-City-offer.webp"
        },
        {   id: 11,  
            name: "Greek Islands",
