@@ -1,0 +1,138 @@
+table{
+   min-width: 300px;
+    font-size: var(--small-font);
+    border: 1px solid black;
+    border-collapse: collapse;
+    th,td {
+        padding: 0.5em 1rem;
+        border: 1px solid black;
+        white-space: pre;
+    }
+    thead th,
+  tbody td {
+    text-align: center;
+  }
+  thead{
+    color: #ffff;
+    background: #000;
+    th {
+        padding: 1rem;
+        font-size: larger;
+      }
+    tr:nth-last-child(1) {
+        background-color: #333;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #eee;
+      }
+  }
+  .blank {
+    background-color: #000;
+  }
+}
+
+.mySlides {display: none}
+.lost {
+    vertical-align: middle;
+    width: 100%;}
+
+
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+#aboutUs{
+  padding: 1rem 5rem;
+  background-color: var(--tertiary-color);
+}
+#aboutUs p{
+  color: var(--secondary-color);
+  font-size: var(--font-base);
+  margin: 1em;
+  width: 70%;
+
+}
+#aboutUs h3{
+  background-color: var(--light-text);
+    border-radius: 20rem;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: var(--secondary-color);
+}
+main p{
+  width: 50%;
+  text-align: left;
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+  #aboutUs{
+    padding: 1rem;
+    text-align:right;}
+}

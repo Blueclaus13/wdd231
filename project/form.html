@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws Patrol Association without lucrative purposes - by Claudia Madrid</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Claudia Madrid - Paws Patrol Association without lucrative purposes">
+    <meta name="author" content="Claudia Madrid">
+    <link rel="stylesheet" href="styles/pawsWorld.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/pawsWorld-large.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script defer src="scripts/pawsWorld.js"></script>
+    <script defer src="scripts/adoption.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Paws</h1>
+        <div id="logo"><img src="images/logo.png" alt="https://www.freepik.com/icon/paws_1152398"></div>
+        <h1>World</h1>
+        <button id="menu"></button>
+        <nav class="links">
+            <a href="pawsWorld.html">Home</a>
+            <a href="adoptions.html">Adoption</a>
+            <a href="form.html">Form Adoption</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="title">I'M INTERESTED TO ADOPT FORM</h2>
+        <section class="information"></section>
+        <section class="contact">
+            <form method="get" action="review.html" class="reviewForm">
+                <label>I am interested in
+                    <select id="products" name="product" required>
+                        <option value="" disabled selected>Select a Pet ... &#9662;</option>
+                    </select>
+                </label>
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label>First Name* <input type="text" name="fname" required></label>
+                    <label>Last Name* <input type="text" name="lname" required></label>
+                    <label>Phone <input type="tel" name="phone" placeholder="1235551234"></label>
+                    <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                </fieldset>
+                <label>
+                    Date that I would like an appointment: 
+                    <input type="date" id="instalationDate" name="instalationDate" required>
+                </label>
+                <fieldset id="reason">
+                    <legend> What I'm looking for having a pet</legend>
+                    <span>(Check all that apply)</span>
+                    <label class="checkbox"><input type="checkbox" name="emotionalSupport" id="emotionalSupport" value="yes"> Emotional Support</label>
+                    <label class="checkbox"><input type="checkbox" name="guardian" id="guardian" value="yes"> House's Guardian </label>
+                    <label class="checkbox"><input type="checkbox" name="friendship" id="friendship" value="yes"> Friendship</label>
+                    <label class="checkbox"><input type="checkbox" name="companyForkids" id="companyForkids" value="yes"> Company for kids</label>
+                </fieldset>
+                <fieldset id="reason">
+                    <legend> Where will the dog sleep</legend>
+                    <span>(Check all that apply)</span>
+                    <label class="checkbox"><input type="checkbox" name="inside" id="inside" value="yes"> Inside</label>
+                    <label class="checkbox"><input type="checkbox" name="frontGarden" id="frontGarden" value="yes"> Front Garden </label>
+                    <label class="checkbox"><input type="checkbox" name="backYard" id="backYard" value="yes"> Back Yard</label>
+                    <label class="checkbox"><input type="checkbox" name="street" id="street" value="yes"> Street</label>
+                </fieldset>
+                <label>Descrive your family members
+                    <span>(Optional)</span>
+                    <textarea id="review" name="review" spellcheck="false"></textarea>
+                </label>
+                <label>Why this animal should become my family memeber
+                    <span>(Optional)</span>
+                    <textarea id="review" name="review" spellcheck="false"></textarea>
+                </label>
+                
+                <input id="submit" type="submit" value="Send Review">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> Paws World address: Calle Rosales #2528 a dos cuadras del pasito. </p>
+        <p>Website where data was collected: https://www.facebook.com/mundopatitaschihuahua</p>
+        <p>© <span id="currentyear"></span> Made by Claudia Madrid without lucrative purposes- Chihuahua, Chihuahua, Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
