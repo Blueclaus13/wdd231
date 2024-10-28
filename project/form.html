@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paws Patrol Association without lucrative purposes - by Claudia Madrid</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Claudia Madrid - Paws Patrol Association without lucrative purposes">
+    <title>All Trip chihuahua Travel Agency without lucrative purposes - by Claudia Madrid</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Claudia Madrid - All Trip chihuahua Travel Agency">
     <meta name="author" content="Claudia Madrid">
-    <link rel="stylesheet" href="styles/pawsWorld.css" />
+    <meta property="og:title" content="All trip a business project for studying purposes." />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blueclaus13.github.io/wdd231/project/" />
+    <meta property="og:image" content="https://blueclaus13.github.io/wdd231/project/images/free_icon_-reda.svg" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/alltrip.css" />
     <link rel="stylesheet" href="styles/form.css" />
-    <link rel="stylesheet" href="styles/pawsWorld-large.css" />
+    <link rel="stylesheet" href="styles/alltrip-large.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <script defer src="scripts/pawsWorld.js"></script>
-    <script defer src="scripts/adoption.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Londrina+Sketch&family=Bangers&isplay=swap" rel="stylesheet">
+    <script src="./scripts/form.js" type="module"></script>
 </head>
 <body>
     <header>
-        <h1>Paws</h1>
-        <div id="logo"><img src="images/logo.png" alt="https://www.freepik.com/icon/paws_1152398"></div>
-        <h1>World</h1>
+        <h1>All</h1>
+        <div id="logo"><img src="images/book-icon.png" alt="https://www.freepik.com/icon/paws_1152398"></div>
+        <h1>Trip Chihuahua</h1>
         <button id="menu"></button>
         <nav class="links">
-            <a href="pawsWorld.html">Home</a>
-            <a href="adoptions.html">Adoption</a>
-            <a href="form.html">Form Adoption</a>
+            <a href="alltrip.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="form.html" class="activePage">Contact Us</a>
         </nav>
     </header>
     <main>
-        <h2 id="title">I'M INTERESTED TO ADOPT FORM</h2>
+        <h2 id="title">Contact us to customize</h2>
         <section class="information"></section>
         <section class="contact">
             <form method="get" action="review.html" class="reviewForm">
-                <label>I am interested in
-                    <select id="products" name="product" required>
-                        <option value="" disabled selected>Select a Pet ... &#9662;</option>
-                    </select>
+                <label >What country /city would you like to visit?
+                    <input type="text" name="product" id="product" placeholder="Mexico city">
                 </label>
                 <fieldset>
                     <legend>Applicant Information</legend>
@@ -44,45 +46,68 @@
                     <label>Phone <input type="tel" name="phone" placeholder="1235551234"></label>
                     <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
                 </fieldset>
-                <label>
-                    Date that I would like an appointment: 
-                    <input type="date" id="instalationDate" name="instalationDate" required>
+                <label for="departureDate">
+                    Departure Date
+                    <input type="date" id="departureDate" name="departureDate" required>
                 </label>
-                <fieldset id="reason">
-                    <legend> What I'm looking for having a pet</legend>
-                    <span>(Check all that apply)</span>
-                    <label class="checkbox"><input type="checkbox" name="emotionalSupport" id="emotionalSupport" value="yes"> Emotional Support</label>
-                    <label class="checkbox"><input type="checkbox" name="guardian" id="guardian" value="yes"> House's Guardian </label>
-                    <label class="checkbox"><input type="checkbox" name="friendship" id="friendship" value="yes"> Friendship</label>
-                    <label class="checkbox"><input type="checkbox" name="companyForkids" id="companyForkids" value="yes"> Company for kids</label>
+                <label for="departureDate">
+                    Return Date:
+                    <input type="date" id="returnDate" name="returnDate" required>
+                </label>
+                <fieldset class="reason">
+                    <legend>Number of Travelers</legend>
+                    <label for="adults"> Adults (18+)
+                        <input type="number" id="adults" name="adults" min="0" required></label>
+                    <label for="kids"> Children (under 18)
+                        <input type="number" id="kids" name="kids" min="0" value="0"></label>
+                    <label for="budget">Trip Budget<input type="text" id="budget" name="budget" placeholder="Sample: $1,000 MX"></label>
                 </fieldset>
-                <fieldset id="reason">
-                    <legend> Where will the dog sleep</legend>
-                    <span>(Check all that apply)</span>
-                    <label class="checkbox"><input type="checkbox" name="inside" id="inside" value="yes"> Inside</label>
-                    <label class="checkbox"><input type="checkbox" name="frontGarden" id="frontGarden" value="yes"> Front Garden </label>
-                    <label class="checkbox"><input type="checkbox" name="backYard" id="backYard" value="yes"> Back Yard</label>
-                    <label class="checkbox"><input type="checkbox" name="street" id="street" value="yes"> Street</label>
+
+                <fieldset class="reason">
+                    <legend>Acomodation Preferences</legend>
+                    <label for="acomodation-type"> Type of Accommodation 
+                        <select id="acomodation-type" name="acomodation-type" required>
+                            <option value="">&nbsp;</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Resort">Resort</option>
+                            <option value="Villa">Villa</option>
+                            <option value="Hostel">Hostel</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Other">Other</option>
+                        </select></label>
+                    <label for="roomtype"> Type of Accommodation 
+                            <select id="roomtype" name="roomtype" required>
+                                <option value="">&nbsp;</option>
+                                <option value="Single">Single</option>
+                                <option value="Double">Double</option>
+                                <option value="Suite">Suite</option>
+                                <option value="Family Room">Family Room (1KBed 2SingleBeds)</option>
+                        </select></label>
+                    <span>(Amenities Check all that apply)</span>
+                    <label class="checkbox" for="Wifi"><input type="checkbox" name="Wifi" id="Wifi" value="yes"> Free Wi-Fi</label>
+                    <label class="checkbox" for="Pool"><input type="checkbox" name="Pool" id="Pool" value="yes"> Pool </label>
+                    <label class="checkbox" for="Gym"><input type="checkbox" name="Gym" id="Gym" value="yes"> Gym</label>
+                    <label class="checkbox" for="Pet"><input type="checkbox" name="Pet" id="Pet" value="yes"> Pet-Friendly</label>
                 </fieldset>
-                <label>Descrive your family members
-                    <span>(Optional)</span>
-                    <textarea id="review" name="review" spellcheck="false"></textarea>
-                </label>
-                <label>Why this animal should become my family memeber
-                    <span>(Optional)</span>
-                    <textarea id="review" name="review" spellcheck="false"></textarea>
-                </label>
+                <fieldset class="reason">
+                    <legend> Interest</legend>
+                    <span>(Check all that apply)</span>
+                    <label class="checkbox" for="Adventure"><input type="checkbox" name="Adventure" id="Adventure" value="want"> Adventure</label>
+                    <label class="checkbox" for="Relaxation"><input type="checkbox" name="Relaxation" id="Relaxation" value="want"> Relaxation</label>
+                    <label class="checkbox" for="Family"><input type="checkbox" name="Family" id="Family" value="want"> Family</label>
+                    <label class="checkbox" for="Romantic"><input type="checkbox" name="Romantic" id="Romantic" value="want"> Romantic</label>
+                    <label class="checkbox" for="Cultural"><input type="checkbox" name="Cultural" id="Cultural" value="want"> Cultural</label>
+                </fieldset>
                 
                 <input id="submit" type="submit" value="Send Review">
             </form>
         </section>
     </main>
     <footer>
-        <p> Paws World address: Calle Rosales #2528 a dos cuadras del pasito. </p>
-        <p>Website where data was collected: https://www.facebook.com/mundopatitaschihuahua</p>
-        <p>© <span id="currentyear"></span> Made by Claudia Madrid without lucrative purposes- Chihuahua, Chihuahua, Mexico</p>
+        <p> All Trip Chihuahua address: Calle 25 1/2 #908, Col. Santo Niño, Chihuahua, Mexico. </p>
+        <p>Website where data was collected: https://www.facebook.com/alltripcuu Agency owner autorized</p>
         <p id="lastModified"></p>
+        <p>© <span id="currentyear"></span> Made by Claudia Madrid without lucrative purposes- Chihuahua, Chihuahua, Mexico</p>
     </footer>
-    
 </body>
 </html>

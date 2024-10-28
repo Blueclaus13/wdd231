@@ -1,13 +1,14 @@
 :root {
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-headline: "Cinzel", "Arial Narrow Bold", sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-headline: "Bangers", "Arial Narrow Bold", sans-serif;
+  --font-sub-header: "Oswald", "Arial Narrow Bold", sans-serif;
     /* colors */
-    --primary-color:  #ff006e;
-    --secondary-color: #8338ec;
-    --tertiary-color: #a2d2ff;
-    --auxiliar-color: #ffc8dd;
-    --light-text: #F7FFF7;
-    --dark-text: #292F36;
+    --primary-color:  #792047; /*Murrey*/
+    --secondary-color: #D4C2FC; /*PeriWinkle*/
+    --tertiary-color: #f6f6e2; /*Beige*/
+    --auxiliar-color: #00635D; /*Caribbean Current*/
+    --light-text: #F7FFF7; /*White*/
+    --dark-text: #01172F; /*Oxford Blue*/
   
     /* sizes */
     --font-base: 1.2em;
@@ -42,20 +43,22 @@ header, main, footer{
 h1{
   color: var(--light-text);
   font-size: var(--title-font);
+  font-family: var(--font-headline);
   margin: 0.25rem;
 
 }
 h2{
-  font-family: var(--font-headline);
+  font-family: var(--font-sub-header);
   text-align: center;
   color: var(--primary-color);
   font-size: var(--headline-font);
 }
 h3{
   text-align: justify;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: var(--large-font);
-  border-bottom: solid #8338ec 5px;
+  text-decoration: underline wavy var(--auxiliar-color);
+  text-underline-offset: 10px;  
 }
 header{
   background-color:  var(--primary-color);
@@ -84,8 +87,8 @@ content: "X";
 }
 #menu {
   font-size: 1.5rem;
-  border: 0;
-  background: none;
+  border-radius: 0.5rem;
+  background: var(--light-text);
   color: var(--auxiliar-color);
   position: absolute;
   top: 1rem;
@@ -95,7 +98,6 @@ content: "X";
 #menu:hover{
   background-color: var(--secondary-color);
   cursor: pointer;
-  border-radius: 0.5rem;
 }
 .open a {
 display: block;
@@ -144,4 +146,19 @@ section{
 }
 .content{
   padding-left: 2rem;
+}
+
+#hero img{
+  width: 100%;
+}
+#name{
+  color: var(--auxiliar-color);
+}
+.active, .activePage{
+  color: var(--tertiary-color);
+  background-color: var(--dark-text);
+}
+#visitsDisplay{
+  margin: 0.5rem;
+  text-align: center;
 }

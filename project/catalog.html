@@ -12,12 +12,12 @@
     <meta property="og:image" content="https://blueclaus13.github.io/wdd231/project/images/free_icon_-reda.svg" />
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/alltrip.css" />
-    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/catalog.css" />
     <link rel="stylesheet" href="styles/alltrip-large.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Londrina+Sketch&family=Bangers&isplay=swap" rel="stylesheet">
-    <script src="scripts/thanks.js" type="module"></script>
+    <script src="scripts/catalog.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -27,24 +27,24 @@
         <button id="menu"></button>
         <nav class="links">
             <a href="alltrip.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="form.html" class="activePage">Contact Us</a>
+            <a href="catalog.html" class="activePage">Catalog</a>
+            <a href="form.html">Contact Us</a>
         </nav>
     </header>
-
     <main>
-        <section id="thank-you">
-            <p>Thank you very much for your interest!!</p>
-            <div id="review">
-            </div>
-        </section>
+        <h2 id="title">Our Catalog</h2>
+        <p>Next is a list of packages that you can choose to simplify your trip. Select one to know more details
+        </p>
+        <div id="gallery"></div>
+        <dialog id="package-detail"></dialog>
     </main>
-
     <footer>
         <p> All Trip Chihuahua address: Calle 25 1/2 #908, Col. Santo Niño, Chihuahua, Mexico. </p>
         <p>Website where data was collected: https://www.facebook.com/alltripcuu Agency owner autorized</p>
         <p id="lastModified"></p>
         <p>© <span id="currentyear"></span> Made by Claudia Madrid without lucrative purposes- Chihuahua, Chihuahua, Mexico</p>
     </footer>
+    
+    
 </body>
 </html>

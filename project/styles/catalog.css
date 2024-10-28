@@ -1,0 +1,47 @@
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    place-items: center;
+}
+picture {
+    background-color:#fff;}
+img { 
+    width: 100%;
+    height: auto;
+   }
+.hover:hover {
+    box-shadow: 0 0 50px #333;}
+    
+.temple{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--padding);
+    cursor: pointer;
+   }
+
+   dialog > button {
+    margin: 20px auto;
+  }
+  dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+ #closeModal {
+    display: block;
+    margin: 40px auto;
+    border: 0;
+    border-radius: 8px;
+    padding: 7px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--primary-color);
+    cursor: pointer;
+    color: var(--light-text);
+    transition: all 240ms linear;
+  } 
+  #closeModal:hover{
+    filter: brightness(0.8);
+  }
